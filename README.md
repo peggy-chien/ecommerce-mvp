@@ -40,8 +40,15 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 ## Database Setup
 
 1. **Environment Setup**:
-   - Create a `.env` file in the root directory
-   - Add your database connection string:
+   Run the following command to setup the environment:
+   ```bash
+   npx prisma init --db --output ../prisma/generated
+   ```
+
+   It will:
+   - Create a prisma directory with a schema.prisma file.
+   - Create a Prisma Postgres database.
+   - Create a `.env` file in the root directory and your database connection string:
    ```
    DATABASE_URL="postgresql://username:password@localhost:5432/your_database_name"
    ```
