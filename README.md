@@ -42,7 +42,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 1. **Environment Setup**:
    Run the following command to setup the environment:
    ```bash
-   npx prisma init --db --output ../prisma/generated
+   npx prisma init --db --output ../src/app/generated/prisma
    ```
 
    It will:
