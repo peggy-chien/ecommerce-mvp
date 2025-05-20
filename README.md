@@ -88,3 +88,44 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 - If you get errors about the database not existing, create it first using your PostgreSQL client
 - Ensure your PostgreSQL server is running before running the migrations
 - The database user specified in the DATABASE_URL needs permissions to create databases and tables
+
+# Shadcn UI Setup
+
+Shadcn UI is a collection of reusable components built on top of Tailwind CSS and Radix UI, providing accessible and customizable UI elements for your Next.js applications.
+
+## Installation
+
+1. **Add Shadcn UI to your project**:
+   ```bash
+   pnpm dlx shadcn@latest init
+   ```
+   During initialization, you'll be prompted to:
+   - Choose a style (Default, New York, etc.)
+   - Select a color scheme
+   - Choose a location for your components
+   - Select your preferred CSS variables naming convention
+
+2. **Add Components**:
+   To add individual components, use:
+   ```bash
+   pnpm dlx shadcn-ui@latest add button
+   pnpm dlx shadcn-ui@latest add card
+   pnpm dlx shadcn-ui@latest add dialog
+   # etc...
+   ```
+
+3. **Usage**:
+   After adding components, you can import them from your components directory:
+   ```tsx
+   import { Button } from "@/components/ui/button"
+   
+   export default function Page() {
+     return <Button>Click me</Button>
+   }
+   ```
+
+## Important Notes
+- Components are added to your project as source code, allowing for full customization
+- Each component is added individually to keep your bundle size minimal
+- You can customize the components by modifying their source code in your components directory
+- The components are built on top of Radix UI primitives for accessibility
